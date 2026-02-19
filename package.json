@@ -1,0 +1,74 @@
+{
+  "name": "continues",
+  "version": "2.6.5",
+  "description": "Never lose context. Resume any AI coding session across Claude, Copilot, Gemini, Codex & OpenCode.",
+  "main": "dist/cli.js",
+  "bin": {
+    "continues": "dist/cli.js",
+    "cont": "dist/cli.js"
+  },
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "start": "node dist/cli.js",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "link": "pnpm build && pnpm link --global",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yigitkonur/cli-continues.git"
+  },
+  "keywords": [
+    "ai",
+    "coding-assistant",
+    "codex",
+    "claude",
+    "copilot",
+    "gemini",
+    "opencode",
+    "session",
+    "resume",
+    "context",
+    "cli",
+    "developer-tools",
+    "productivity",
+    "rate-limit",
+    "session-handoff",
+    "context-switch",
+    "cross-tool"
+  ],
+  "author": "Yigit Konur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yigitkonur/cli-continues/issues"
+  },
+  "homepage": "https://github.com/yigitkonur/cli-continues#readme",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.0.1",
+    "chalk": "^4.1.2",
+    "commander": "^14.0.3",
+    "ora": "^5.4.1",
+    "yaml": "^2.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.1.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
